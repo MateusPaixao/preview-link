@@ -29,17 +29,8 @@ export default class App extends Component {
       // Schedule a notification
       PushNotification.localNotificationSchedule({
         message: 'Scheduled delay notification message', // (required)
-        date: new Date(Date.now() + (3 * 1000)) // in 3 secs
+        date: new Date(Date.now() + (4 * 1000)) // in 3 secs
       });
-
-
-      setTimeout(function(){ 
-        PushNotification.localNotification({
-          message: 'BACKGROUND', 
-        })
-      }, 3000)
-      
-
     }
   };
 
